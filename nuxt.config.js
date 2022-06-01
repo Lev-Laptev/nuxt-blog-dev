@@ -38,10 +38,40 @@ export default {
     '@nuxt/postcss8'
   ],
 
+  router: {
+    middleware: ['auth']
+  },
+
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     // https://go.nuxtjs.dev/axios
-    '@nuxtjs/axios'
+    '@nuxtjs/axios',
+    '@nuxtjs/vuetify',
+    [
+      '@nuxtjs/firebase',
+      {
+        config: {
+          apiKey: 'AIzaSyCUCDipjx7VdCIcBrgfjHxd6X6VbmOL98g',
+          authDomain: 'users-e7228.firebaseapp.com',
+          databaseURL: 'https://users-e7228-default-rtdb.firebaseio.com',
+          projectId: 'users-e7228',
+          storageBucket: 'users-e7228.appspot.com',
+          messagingSenderId: '192656141486',
+          appId: '1:192656141486:web:f92229e21a49e6d17d513f',
+          measurementId: 'G-2BR2QHGTBB'
+        },
+        services: {
+          auth: {
+            persistence: 'local', // default
+            initialize: {
+              onAuthStateChangedAction: 'onAuthStateChangedAction',
+              subscribeManually: false
+            },
+            ssr: false
+          }
+        }
+      }
+    ]
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
