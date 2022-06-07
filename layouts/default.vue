@@ -1,15 +1,9 @@
 <template>
-  <v-app>
-    <v-main>
-      <v-container>
-        <AppHeader />
-        <Nuxt />
-        <AppFooter />
-      </v-container>
-    </v-main>
-  </v-app>
-</template>
-
+  <div class="container">
+    <AppHeader />
+    <Nuxt />
+    <AppFooter />
+  </div>
 </template>
 
 <script>
