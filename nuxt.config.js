@@ -46,7 +46,7 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
-    '@nuxtjs/vuetify',
+    'nuxt-buefy',
     [
       '@nuxtjs/firebase',
       {
@@ -82,11 +82,5 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
-    postcss: {
-      plugins: {
-        tailwindcss: {},
-        autoprefixer: {}
-      }
-    }
   }
 }
