@@ -1,54 +1,63 @@
 <template>
-  <v-row align="center" justify="center">
-    <v-col cols="12" sm="8" md="4" align="center">
-      <v-card width="500" class="elevation-4 text-left" shaped color="yellow">
-        <v-card-title>Login</v-card-title>
-        <v-card-subtitle>Login to your dashboard</v-card-subtitle>
-        <v-card-text>
-          <v-form>
-            <v-text-field
-              v-model="auth.email"
-              label="Login"
-              name="login"
-              prepend-icon="mdi-account"
-              type="text"
-            />
+  <div class="columns wrapper">
+    <div class="column is-12-mobile is-6-tablet is-5-desktop">
+      <form>
+        <div
+          class="modal-card"
+        >
+          <header class="modal-card-head">
+            <p class="modal-card-title">
+              Login
+            </p>
+          </header>
 
-            <v-text-field
-              v-model="auth.password"
-              label="Password"
-              name="password"
-              prepend-icon="mdi-lock"
-              type="password"
+          <section class="modal-card-body">
+            <b-field label="Login">
+              <b-input
+                v-model="auth.email"
+                type="text"
+                placeholder="Login"
+                required
+                rounded
+              />
+            </b-field>
+
+            <b-field label="Пароль">
+              <b-input
+                v-model="auth.password"
+                type="password"
+                password-reveal
+                placeholder="Password"
+                required
+                rounded
+              />
+            </b-field>
+          </section>
+          <footer class="modal-card-foot">
+            <b-button
+              class="is-info"
+              label="Login"
+              type="submit"
+              @click.prevent="login"
             />
-          </v-form>
-        </v-card-text>
-        <v-card-actions class="text-center">
-          <v-btn
-            class="login-button"
-            depressed
-            large
-            @click="login"
-          >
-            Login
-          </v-btn>
-        </v-card-actions>
-      </v-card>
-    </v-col>
-  </v-row>
+          </footer>
+        </div>
+      </form>
+    </div>
+  </div>
 </template>
 
 <script>
 export default {
   name: 'SingInPage',
-  data () {
-    return {
-      auth: {
-        email: '',
-        password: ''
-      }
+  layout: 'auth',
+  data: () => ({
+    isActive: false,
+    auth: {
+      email: 'common.levlaptev@gmail.com',
+      password: '123!!!'
     }
-  },
+  }),
   methods: {
     login () {
       this.$fire.auth.signInWithEmailAndPassword(this.auth.email, this.auth.password)
@@ -61,3 +70,22 @@ export default {
   }
 }
 </script>
+
+<style lang="scss">
+  .wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 100vh;
+  }
+
+  .modal-card {
+    width: auto;
+
+    &-head, &-foot {
+      background-color: #ffffff;
+    }
+  }
+</style>
