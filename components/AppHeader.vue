@@ -6,7 +6,7 @@
 import AppNavbar from '@/components/AppNavbar.vue'
 
 export default {
-  name: 'LayoutDefault',
+  name: 'AppHeader',
 
   components: {
     AppNavbar
