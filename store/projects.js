@@ -6,7 +6,7 @@ export const getters = {}
 
 export const actions = {
   async getProjects ({ commit }) {
-    const projects = await this.$axios.$get('https://api.github.com/users/lev-laptev/repos')
+    const projects = await this.$axios.$get('/users/lev-laptev/repos')
 
     commit('ADD_PROJECTS', projects)
   }
