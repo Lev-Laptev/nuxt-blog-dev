@@ -54,8 +54,8 @@ export default {
   data: () => ({
     isActive: false,
     auth: {
-      email: 'common.levlaptev@gmail.com',
-      password: '123!!!'
+      email: '',
+      password: ''
     }
   }),
   methods: {
