@@ -3,11 +3,11 @@
     <app-projects-header />
 
     <div class="columns">
-      <div class="column is-12">
+      <div class="column is-flex is-flex-direction-row is-flex-wrap-wrap is-justify-content-space-between cards">
         <div
           v-for="item in projects"
           :key="item.id"
-          class="card"
+          class="card is-flex is-flex-grow-1"
         >
           <div class="card-content">
             <div class="media">
@@ -79,3 +79,9 @@ export default {
   }
 }
 </script>
+
+<style lang="scss" scoped>
+  .cards {
+    gap: 10px;
+  }
+</style>
