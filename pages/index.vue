@@ -1,9 +1,14 @@
 <template>
-  <div />
+  <AuthorCard />
 </template>
 
 <script>
+import AuthorCard from '@/components/author/AuthorCard.vue'
+
 export default {
-  name: 'defaultPage'
+  name: 'DefaultPage',
+  components: {
+    AuthorCard
+  }
 }
 </script>
