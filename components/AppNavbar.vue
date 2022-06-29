@@ -25,30 +25,12 @@
         Projects
       </b-navbar-item>
     </template>
-
-    <template #end>
-      <b-navbar-item tag="div">
-        <div class="buttons">
-          <a
-            class="button is-info"
-            @click.prevent="logout"
-          >
-            <strong>Logout</strong>
-          </a>
-        </div>
-      </b-navbar-item>
-    </template>
   </b-navbar>
 </template>
 
 <script>
 export default {
-  name: 'AppNavbar',
-  methods: {
-    logout () {
-      this.$fire.auth.signOut()
-    }
-  }
+  name: 'AppNavbar'
 }
 </script>
 
