@@ -2,14 +2,16 @@
   <div>
     <app-projects-header />
 
-    <div class="columns">
-      <div class="column is-flex is-flex-direction-row is-flex-wrap-wrap is-justify-content-space-between cards">
+    <div class="columns is-multiline is-mobile is-centered">
+      <div
+        v-for="item in projects"
+        :key="item.id"
+        class="column is-12-mobile is-6-tablet is-4-desktop"
+      >
         <div
-          v-for="item in projects"
-          :key="item.id"
-          class="card is-flex is-flex-grow-1"
+          class="card"
         >
-          <div class="card-content">
+          <div class="card-content is-flex is-flex-direction-column is-justify-content-space-between">
             <div class="media">
               <div class="media-content">
                 <p class="title is-4">
@@ -81,7 +83,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  .cards {
-    gap: 10px;
+  .card, .card-content {
+    height: 100%;
   }
 </style>
