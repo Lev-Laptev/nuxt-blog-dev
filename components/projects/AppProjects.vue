@@ -67,7 +67,7 @@
 
 <script>
 import { mapState } from 'vuex'
-import AppProjectsHeader from '@/components/projects/AppProjectsHeader.vue'
+import AppProjectsHeader from '@/components/Projects/AppProjectsHeader.vue'
 
 export default {
   name: 'AppProjects',

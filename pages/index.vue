@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import AuthorCard from '@/components/author/AuthorCard.vue'
+import { AuthorCard } from '@/components/Author'
 
 export default {
   name: 'DefaultPage',

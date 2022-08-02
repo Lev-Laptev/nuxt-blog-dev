@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import AppProjects from '@/components/projects/AppProjects.vue'
+import { AppProjects } from '@/components/Projects'
 
 export default {
   name: 'ProjectsPage',

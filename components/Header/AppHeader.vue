@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import AppNavbar from '@/components/AppNavbar.vue'
+import { AppNavbar } from '@/components/Navbar'
 
 export default {
   name: 'AppHeader',
