@@ -1,14 +1,25 @@
 <template>
-  <AuthorCard />
+  <div class="columns">
+    <div class="column is-4">
+      <AuthorCard />
+    </div>
+    <div class="column is-8">
+      <AuthorContent />
+
+      <AuthorStepHistory />
+    </div>
+  </div>
 </template>
 
 <script>
-import { AuthorCard } from '@/components/Author'
+import { AuthorCard, AuthorContent, AuthorStepHistory } from '@/components/Author'
 
 export default {
   name: 'DefaultPage',
   components: {
-    AuthorCard
+    AuthorCard,
+    AuthorContent,
+    AuthorStepHistory
   }
 }
 </script>
