@@ -57,6 +57,6 @@
 
 <script>
 export default {
-  name: 'AuthorStepHistory'
+  name: 'AppAuthorStepHistory'
 }
 </script>

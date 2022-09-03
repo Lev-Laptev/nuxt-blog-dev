@@ -1,25 +1,25 @@
 <template>
   <div class="columns">
     <div class="column is-4">
-      <AuthorCard />
+      <AppAuthorCard />
     </div>
     <div class="column is-8">
-      <AuthorContent />
+      <AppAuthorContent />
 
-      <AuthorStepHistory />
+      <AppAuthorStepHistory />
     </div>
   </div>
 </template>
 
 <script>
-import { AuthorCard, AuthorContent, AuthorStepHistory } from '@/components/Author'
+import { AppAuthorCard, AppAuthorContent, AppAuthorStepHistory } from '@/components/Author'
 
 export default {
   name: 'DefaultPage',
   components: {
-    AuthorCard,
-    AuthorContent,
-    AuthorStepHistory
+    AppAuthorCard,
+    AppAuthorContent,
+    AppAuthorStepHistory
   }
 }
 </script>

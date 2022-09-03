@@ -1,3 +1,3 @@
-export { default as AuthorCard } from './AuthorCard.vue'
-export { default as AuthorContent } from './AuthorContent.vue'
-export { default as AuthorStepHistory } from './AuthorStepHistory.vue'
+export { default as AppAuthorCard } from './AppAuthorCard.vue'
+export { default as AppAuthorContent } from './AppAuthorContent.vue'
+export { default as AppAuthorStepHistory } from './AppAuthorStepHistory.vue'

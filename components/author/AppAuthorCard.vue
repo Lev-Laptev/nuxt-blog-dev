@@ -48,7 +48,7 @@ import Github from '@/assets/icons/github_new.svg?inline'
 import Mail from '@/assets/icons/mail.svg?inline'
 
 export default {
-  name: 'AuthorCard',
+  name: 'AppAuthorCard',
   components: { Mail, Github }
 }
 </script>
