@@ -7,7 +7,6 @@ import { AppNavbar } from '@/components/Navbar'
 
 export default {
   name: 'AppHeader',
-
   components: {
     AppNavbar
   }
