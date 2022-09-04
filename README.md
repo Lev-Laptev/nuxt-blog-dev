@@ -1,6 +1,8 @@
 # nuxt-blog-dev
 
-### View: [Click](https://nuxt-blog-dev.netlify.app/)
+## Demo
+
+View: [Click](https://nuxt-blog-dev.netlify.app/)
 
 ## Build Setup
 
